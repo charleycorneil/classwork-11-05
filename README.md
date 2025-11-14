@@ -14,26 +14,6 @@ Built with Tailwind CSS and customized global styles in globals.css.
 Clean Layout & Navigation
 Global header and footer with links to each demo route.
 
-🗂 Project Structure
-src/app/
-├── layout.js # Global layout (header, footer, theme)
-├── globals.css # Tailwind-based global styling
-│
-├── page.js # Home page – overview of all demos
-│
-├── client-error/ # Client-side error simulation
-│ ├── page.js
-│
-├── server-error/ # Server-side error simulation
-│ ├── page.js
-│ ├── loading.js
-│ └── error.js
-│
-└── client-vs-server/ # Client vs Server rendering comparison
-├── page.js
-├── CatchButton.js
-└── PokemonList.js
-
 🧠 How It Works
 Folder Purpose
 /client-error Randomly triggers a client-side error using React state.
