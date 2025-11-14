@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #2563eb;
+  --accent-ghost: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --accent: #60a5fa;
+    --accent-ghost: #1f2937;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.nav-link {
+  @apply rounded px-3 py-1.5 text-zinc-700 transition hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900;
+}
+
+.btn-primary {
+  @apply rounded-full px-4 py-2 font-medium text-white transition;
+  background: var(--accent);
+}
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-ghost {
+  @apply rounded-full border px-4 py-2 font-medium transition;
+  background: transparent;
+  border-color: color-mix(in oklab, var(--foreground) 12%, transparent);
+}
+
+.card-link {
+  @apply rounded-lg border p-4 transition hover:-translate-y-0.5 hover:shadow-sm;
+  border-color: color-mix(in oklab, var(--foreground) 12%, transparent);
+  background: color-mix(in oklab, var(--background) 94%, var(--accent-ghost));
+}
+
+.card-title {
+  @apply mb-1 text-base font-semibold;
+}
+
+.card-body {
+  @apply text-sm text-zinc-600 dark:text-zinc-400;
+}
